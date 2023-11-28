@@ -30,9 +30,7 @@ function DeleteModal() {
   const deleteFile = async () => {
     if (!user || !fileId) return;
 
-    const toastId = toast.loading("Deleting File", {
-      icon: "🗑️",
-    });
+    const toastId = toast.loading("Deleting File");
     const fileRef = ref(storage, `users/${user.id}/files/${fileId}`);
 
     try {
